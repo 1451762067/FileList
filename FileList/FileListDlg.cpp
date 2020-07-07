@@ -208,13 +208,9 @@ void CFileListDlg::OnBnClickedButton1()
 		m_dstDir = szDir;
 
 		DWORD dwFlag = GetFileAttributes(szDir);
-		if (dwFlag & FILE_ATTRIBUTE_DIRECTORY)
-		{
-			m_dstDir = szDir; 
-			
-		}
-		else
-		{
+		if (dwFlag & FILE_ATTRIBUTE_DIRECTORY){
+			m_dstDir = szDir;
+		}else{
 			m_dstDir = "";
 		}
 		UpdateData(FALSE);
